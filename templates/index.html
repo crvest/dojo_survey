@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='/css/style.css') }}">
+</head>
+<body>
+    
+
+
+    <form action="/process" method="POST" class="flexcol">
+        <!-- name field -->
+        <div class="flexrow">
+            <label for="name">Your Name:</label>
+            <input type="text" name="name">
+        </div>
+        <!-- location drop down -->
+        <div class="flex">
+            <label for="location">Dojo Location: </label>
+            <select name="location" id="location">
+                <option hidden value="defaultc">choose a city</option>
+                <option value="Boston">Boston</option>
+                <option value="Chicago">Chicago</option>
+                <option value="Los Angeles">Los Angeles</option>
+                <option value="Seattle">Seattle</option>
+            </select>
+        </div>
+        <!-- language drop down -->
+        <div class="flex">
+            <label for="language">Favorite Language: </label>
+            <select name="language" id="language">
+                <option hidden value="default">choose a language</option>
+                <option value="Python">Python</option>
+                <option value="Java">Java</option>
+                <option value="C#">C#</option>
+                <option value="HTML">HTML</option>
+            </select>
+        </div>
+        <!-- comment box -->
+        <label for="comment">Comment (optional):</label>
+        <input type="text" name="comment" id="comment">
+        <!-- submit button -->
+        <input type="submit" value="Submit">
+    </form>
+
+
+</body>
+</html>
